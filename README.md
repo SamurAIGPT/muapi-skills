@@ -118,6 +118,8 @@ Each recipe declares its `inputs` and a `Steps` body. Pass the inputs and let yo
 ## 🚀 Quick Start
 
 > **Fastest path:** [`muapi-models`](skills/muapi-models/SKILL.md) is a single skill that lets your coding agent discover, price and run any [Muapi](https://muapi.ai) model. Install it with `npx skills add https://muapi.ai`, set `MUAPI_API_KEY`, and ask in plain language. See the [install guide](https://muapi.ai/docs/ai-agent-overview). The steps below set up the script library in this repo.
+>
+> **Run your coding agent on Muapi credits:** [`muapi-chat-agents`](skills/muapi-chat-agents/SKILL.md) configures Claude Code (and, experimentally, Codex CLI) to use Muapi as its model provider, with Claude models or Muapi's uncensored models. Same install command; see the [guide](https://muapi.ai/docs/ai-agent-install-chat-agents).
 
 ### 1. Install the muapi CLI
 

@@ -1,6 +1,6 @@
 ---
 name: muapi-chat-agents
-description: Run Claude Code or Codex CLI on Muapi (api.muapi.ai) using Muapi credits instead of a separate vendor account. Use when the user wants a local coding agent to use Muapi as its model provider, asks which Muapi models work with Claude Code or Codex, or needs the base URL, API key variable, provider block or model name for either agent. Covers Claude Code (Anthropic Messages, verified) and Codex CLI (OpenAI Responses, experimental), model discovery, verification and troubleshooting.
+description: Run Claude Code or Codex CLI on Muapi (api.muapi.ai) using Muapi credits instead of a separate vendor account. Use when the user wants a local coding agent to use Muapi as its model provider, asks which Muapi models work with Claude Code or Codex, or needs the base URL, API key variable, provider block or model name for either agent. Covers Claude Code (Anthropic Messages) and Codex CLI (OpenAI Responses), model discovery, verification and troubleshooting.
 ---
 
 # Muapi chat agents
@@ -10,7 +10,7 @@ Muapi serves coding agents natively, so no translation proxy is needed:
 | Agent | Protocol | Base URL | Models endpoint |
 |---|---|---|---|
 | Claude Code | Anthropic Messages | `https://api.muapi.ai/anthropic` | `GET /anthropic/v1/models` |
-| Codex CLI (experimental, not yet verified end to end) | OpenAI Responses | `https://api.muapi.ai/openai/v1` | `GET /openai/v1/models` |
+| Codex CLI | OpenAI Responses | `https://api.muapi.ai/openai/v1` | `GET /openai/v1/models` |
 
 Usage bills against the user's Muapi credits at the same per-model prices as the Muapi API. Auth is
 always the user's Muapi API key, read from `MUAPI_API_KEY` (never paste or commit it).
@@ -54,7 +54,7 @@ Run `/status` inside Claude Code to confirm the base URL, and `claude --debug` t
 
 ### Uncensored (abliterated) models in Claude Code
 
-`GET /anthropic/v1/models` also lists the tool-capable abliterated models. Use the same base URL and key, pick one with `claude --model <id>`, and set `ANTHROPIC_DEFAULT_HAIKU_MODEL` and `ANTHROPIC_SMALL_FAST_MODEL` to that same id (otherwise Claude Code's background requests 404). Warn the user: quality varies by model (smaller models can skip steps on multi-file tasks), there is no prompt caching so every turn re-bills the whole conversation, and output is capped at 16,384 tokens per response. Codex CLI can use them too through `/openai/v1` (set `model` to the id); this path has been tested with raw Responses requests but not yet with a real Codex CLI session, so tell the user it is experimental.
+`GET /anthropic/v1/models` also lists the tool-capable abliterated models. Use the same base URL and key, pick one with `claude --model <id>`, and set `ANTHROPIC_DEFAULT_HAIKU_MODEL` and `ANTHROPIC_SMALL_FAST_MODEL` to that same id (otherwise Claude Code's background requests 404). Warn the user: quality varies by model (smaller models can skip steps on multi-file tasks), there is no prompt caching so every turn re-bills the whole conversation, and output is capped at 16,384 tokens per response. Codex CLI can use them too through `/openai/v1` (set `model` to the id); this path is tested with real Codex CLI sessions (file write, shell and `apply_patch` tool calls on qwen, mimo and glm), but quality varies by model.
 
 ### Codex CLI
 

@@ -32,19 +32,19 @@ This repository uses a **Core/Library** split to ensure efficiency and high-sign
 
 ### ⚙️ Core Primitives (`/core`)
 Thin wrappers around [`muapi-cli`](https://github.com/SamurAIGPT/muapi-cli) for raw API access.
-- `core/media/` — File upload
-- `core/edit/` — Image editing (prompt-based)
-- `core/platform/` — Setup, auth & result polling
+- `skills/core/media/` — File upload
+- `skills/core/edit/` — Image editing (prompt-based)
+- `skills/core/platform/` — Setup, auth & result polling
 
 ### 📚 Expert Library (`/library`)
 High-value skills that translate creative intent into technical directives.
-- **Cinema Director** (`/library/motion/cinema-director/`) — Technical film direction & cinematography.
-- **Nano-Banana** (`/library/visual/nano-banana/`) — Reasoning-driven image generation (Gemini 3 Style).
-- **UI Designer** (`/library/visual/ui-design/`) — High-fidelity mobile/web mockups (Atomic Design).
-- **Logo Creator** (`/library/visual/logo-creator/`) — Minimalist vector branding (Geometric Primitives).
-- **Seedance 2 (Doubao Video)** (`/library/motion/seedance-2/`) — Director-level cinematic video generation with text-to-video, image-to-video, and video extension with native audio-video sync.
-- **AI Clipping** (`/library/edit/ai-clipping/`) — Long video → ranked vertical short clips in one managed API call. Server-side transcription, virality ranking, dedupe, and face-tracked auto-crop — no local Whisper or LLM.
-- **YouTube Shorts** (`/library/social/youtube-shorts/`) — Platform-aware preset over AI Clipping (Shorts / TikTok / Reels / Feed defaults).
+- **Cinema Director** (`skills/library/motion/cinema-director/`) — Technical film direction & cinematography.
+- **Nano-Banana** (`skills/library/visual/nano-banana/`) — Reasoning-driven image generation (Gemini 3 Style).
+- **UI Designer** (`skills/library/visual/ui-design/`) — High-fidelity mobile/web mockups (Atomic Design).
+- **Logo Creator** (`skills/library/visual/logo-creator/`) — Minimalist vector branding (Geometric Primitives).
+- **Seedance 2 (Doubao Video)** (`skills/library/motion/seedance-2/`) — Director-level cinematic video generation with text-to-video, image-to-video, and video extension with native audio-video sync.
+- **AI Clipping** (`skills/library/edit/ai-clipping/`) — Long video → ranked vertical short clips in one managed API call. Server-side transcription, virality ranking, dedupe, and face-tracked auto-crop — no local Whisper or LLM.
+- **YouTube Shorts** (`skills/library/social/youtube-shorts/`) — Platform-aware preset over AI Clipping (Shorts / TikTok / Reels / Feed defaults).
 
 Plus **41 ready-to-run workflow recipes** organized by output type — see [🎬 Recipe Pack](#-recipe-pack) below.
 
@@ -58,58 +58,58 @@ Forty-one LLM-orchestrated workflow recipes that combine multiple `muapi-cli` ca
 
 | Skill | Description |
 |:---|:---|
-| [3D Logo Animation](library/motion/3d-logo-animation/) | Transform a 2D logo into a premium 3D version and animate it with professional cinematic effects |
-| [AI Fight Scene Generator](library/motion/ai-fight-scene/) | High-cut-density action / fight scene — 16-cell storyboard image drives Seedance 2.0 i2v for shot-by-shot choreography |
-| [Animal Vlogger Video](library/motion/animal-video-generator/) | Hilarious, ultra-realistic anthropomorphic-animal vlogger acting like a human in a real-world setting |
-| [Cartoon Dance Animation](library/motion/cartoon-dance-animation/) | Convert a photo into a Pixar-style 3D cartoon, then animate using a reference dance/motion video |
-| [Character Story Video](library/motion/character-story-video/) | Multi-part animated story video — establish a consistent character then animate sequential scenes |
-| [Drone-Style Video](library/motion/drone-style-video/) | Aerial drone-perspective footage — bird's-eye sweeps, orbit shots, and flyover sequences |
-| [Giant Product Showcase](library/motion/giant-product-showcase/) | Dramatic giant-scale product visual (building-sized object next to a person), optionally animated |
-| [Jewelry Product Video](library/motion/jewelry-product-video/) | Luxury jewelry ad with high-end commercial cinematography and detailed macro animation |
-| [Music Video](library/motion/music-video/) | Short music video from a song theme — keyframes, animation per beat, matching music track |
-| [One-Shot Video](library/motion/one-shot-video/) | Single continuous cinematic shot — no cuts, one seamless flowing scene |
-| [Cinematic Product Ad](library/motion/product-ad-cinematic/) | Cinematic 5–10s product ad from a product photo + brand brief |
-| [Product Showcase Video](library/motion/product-showcase-video/) | Dynamic product showcase with explosive ingredient arrangement + realistic motion animation |
-| [Product Video Ad Maker](library/motion/product-video-ad-maker/) | High-end cinematic product video ad starting from a simple product photo |
-| [Talking Baby Video](library/motion/talking-baby-video/) | Viral-style talking-baby video with custom costumes and scripts |
-| [UGC Lifestyle Try-On](library/motion/ugc-lifestyle-try-on/) | UGC-style lifestyle photos & video of a person using your product — authentic, social-native |
-| [UGC Video Factory](library/motion/ugc-video-factory/) | Person photo + product photo + script → 10s vertical 9:16 UGC video ad with native dialogue (Nano-Banana Pro Edit → Seedance 2.0 VIP i2v) |
+| [3D Logo Animation](skills/library/motion/3d-logo-animation/) | Transform a 2D logo into a premium 3D version and animate it with professional cinematic effects |
+| [AI Fight Scene Generator](skills/library/motion/ai-fight-scene/) | High-cut-density action / fight scene — 16-cell storyboard image drives Seedance 2.0 i2v for shot-by-shot choreography |
+| [Animal Vlogger Video](skills/library/motion/animal-video-generator/) | Hilarious, ultra-realistic anthropomorphic-animal vlogger acting like a human in a real-world setting |
+| [Cartoon Dance Animation](skills/library/motion/cartoon-dance-animation/) | Convert a photo into a Pixar-style 3D cartoon, then animate using a reference dance/motion video |
+| [Character Story Video](skills/library/motion/character-story-video/) | Multi-part animated story video — establish a consistent character then animate sequential scenes |
+| [Drone-Style Video](skills/library/motion/drone-style-video/) | Aerial drone-perspective footage — bird's-eye sweeps, orbit shots, and flyover sequences |
+| [Giant Product Showcase](skills/library/motion/giant-product-showcase/) | Dramatic giant-scale product visual (building-sized object next to a person), optionally animated |
+| [Jewelry Product Video](skills/library/motion/jewelry-product-video/) | Luxury jewelry ad with high-end commercial cinematography and detailed macro animation |
+| [Music Video](skills/library/motion/music-video/) | Short music video from a song theme — keyframes, animation per beat, matching music track |
+| [One-Shot Video](skills/library/motion/one-shot-video/) | Single continuous cinematic shot — no cuts, one seamless flowing scene |
+| [Cinematic Product Ad](skills/library/motion/product-ad-cinematic/) | Cinematic 5–10s product ad from a product photo + brand brief |
+| [Product Showcase Video](skills/library/motion/product-showcase-video/) | Dynamic product showcase with explosive ingredient arrangement + realistic motion animation |
+| [Product Video Ad Maker](skills/library/motion/product-video-ad-maker/) | High-end cinematic product video ad starting from a simple product photo |
+| [Talking Baby Video](skills/library/motion/talking-baby-video/) | Viral-style talking-baby video with custom costumes and scripts |
+| [UGC Lifestyle Try-On](skills/library/motion/ugc-lifestyle-try-on/) | UGC-style lifestyle photos & video of a person using your product — authentic, social-native |
+| [UGC Video Factory](skills/library/motion/ugc-video-factory/) | Person photo + product photo + script → 10s vertical 9:16 UGC video ad with native dialogue (Nano-Banana Pro Edit → Seedance 2.0 VIP i2v) |
 
 **Social (5)**
 
 | Skill | Description |
 |:---|:---|
-| [Instagram Post](library/social/instagram-post/) | Polished on-brand Instagram post — hero image + caption + hashtags |
-| [Product Campaign Pack](library/social/product-campaign/) | Full multi-channel campaign — hero visuals, social assets, short ad video, platform crops |
-| [RedNote Cover](library/social/rednote-cover/) | Xiaohongshu (小红书) cover image — vibrant lifestyle aesthetic with typography overlay |
-| [Social Media Pack](library/social/social-pack/) | Re-render a hero image into Instagram / TikTok / Shorts / X aspect ratios |
-| [UGC Ads Workflow](library/social/ugc-ads-workflow/) | UGC video ad pipeline — combine selfie + product image, write script, animate |
+| [Instagram Post](skills/library/social/instagram-post/) | Polished on-brand Instagram post — hero image + caption + hashtags |
+| [Product Campaign Pack](skills/library/social/product-campaign/) | Full multi-channel campaign — hero visuals, social assets, short ad video, platform crops |
+| [RedNote Cover](skills/library/social/rednote-cover/) | Xiaohongshu (小红书) cover image — vibrant lifestyle aesthetic with typography overlay |
+| [Social Media Pack](skills/library/social/social-pack/) | Re-render a hero image into Instagram / TikTok / Shorts / X aspect ratios |
+| [UGC Ads Workflow](skills/library/social/ugc-ads-workflow/) | UGC video ad pipeline — combine selfie + product image, write script, animate |
 
 **Visual / Images & Design (21)**
 
 | Skill | Description |
 |:---|:---|
-| [Action Figure Generator](library/visual/action-figure-generator/) | Convert a photo of a person into a custom 3D action figure with collectible toy packaging |
-| [Ad Creative Set](library/visual/ad-creative/) | High-converting ad set — hero image, copy variations, platform crops for Meta / Google / LinkedIn |
-| [Amazon Product Listing Pack](library/visual/amazon-product-listing/) | Full Amazon listing image set — hero, lifestyle, infographic, comparison/detail closeups |
-| [Blog Header](library/visual/blog-header/) | Professional 1200×628 blog header image with optional title composition guidance |
-| [Brand Kit](library/visual/brand-kit/) | Cohesive brand visual kit — logo concept, color palette, typography pairings |
-| [Brochure Designer](library/visual/brochures/) | Multi-page brochure — cover, inner spread, back — for business, real estate, events, launches |
-| [Couple Grid Creator](library/visual/couple-grid-creator/) | Stylized 6-box grid of a couple in romantic poses, each pose framed inside cardboard packaging |
-| [Brand Design Guide](library/visual/design-guide/) | Comprehensive design guide — palette, typography, UI components, visual identity rules |
-| [Fashion Try-On](library/visual/fashion-try-on/) | Virtually try outfits by combining a person's photo + clothing item, optional fashion model video |
-| [Floor Plan Rendering](library/visual/floor-plan-rendering/) | Design a 2D floor plan and convert into a realistic 3D architectural rendering |
-| [Interior Design](library/visual/interior-design/) | Pro interior design visualizations — redesign rooms, generate concepts, visualize furniture styles |
-| [Interior Design Visualizer](library/visual/interior-design-visualizer/) | Generate an empty room and fill it with stylish furniture / decor; or redesign an existing room |
-| [Keyboard Art Maker](library/visual/keyboard-art-maker/) | Artistic top-down photos of keyboard keycaps arranged to spell custom messages |
-| [Logo + Branding Package](library/visual/logo-branding/) | Logo + full branding package — variations (dark/light/icon), palette, mockups |
-| [Logo Generator](library/visual/logo-generator/) | Quick single-shot polished logo — fast, clean vector aesthetic with accurate brand-name text |
-| [Multi-Angle Reshoot](library/visual/multi-angle-reshoot/) | Re-render a subject from dramatic camera angles (fish-eye, bird's-eye, low, macro) — identity preserved |
-| [Multi-Angle Shots](library/visual/multi-angle-shots/) | Full multi-angle product shot set — front, side, back, top-down, 45° |
-| [Selfie with Celebrities](library/visual/selfie-with-celebrities/) | Realistic behind-the-scenes selfie of the user with a celebrity; optional cinematic long-take |
-| [Storyboard Generator](library/visual/storyboard/) | Generate N keyframes for a short story or scene sequence (image only, no video) |
-| [URL to Design](library/visual/url-to-design/) | Analyze a website URL and generate a redesigned, improved UI with modern aesthetics |
-| [YouTube Thumbnail](library/visual/youtube-thumbnail/) | High-CTR YouTube thumbnail — striking imagery, bold text placement, emotional face/subject |
+| [Action Figure Generator](skills/library/visual/action-figure-generator/) | Convert a photo of a person into a custom 3D action figure with collectible toy packaging |
+| [Ad Creative Set](skills/library/visual/ad-creative/) | High-converting ad set — hero image, copy variations, platform crops for Meta / Google / LinkedIn |
+| [Amazon Product Listing Pack](skills/library/visual/amazon-product-listing/) | Full Amazon listing image set — hero, lifestyle, infographic, comparison/detail closeups |
+| [Blog Header](skills/library/visual/blog-header/) | Professional 1200×628 blog header image with optional title composition guidance |
+| [Brand Kit](skills/library/visual/brand-kit/) | Cohesive brand visual kit — logo concept, color palette, typography pairings |
+| [Brochure Designer](skills/library/visual/brochures/) | Multi-page brochure — cover, inner spread, back — for business, real estate, events, launches |
+| [Couple Grid Creator](skills/library/visual/couple-grid-creator/) | Stylized 6-box grid of a couple in romantic poses, each pose framed inside cardboard packaging |
+| [Brand Design Guide](skills/library/visual/design-guide/) | Comprehensive design guide — palette, typography, UI components, visual identity rules |
+| [Fashion Try-On](skills/library/visual/fashion-try-on/) | Virtually try outfits by combining a person's photo + clothing item, optional fashion model video |
+| [Floor Plan Rendering](skills/library/visual/floor-plan-rendering/) | Design a 2D floor plan and convert into a realistic 3D architectural rendering |
+| [Interior Design](skills/library/visual/interior-design/) | Pro interior design visualizations — redesign rooms, generate concepts, visualize furniture styles |
+| [Interior Design Visualizer](skills/library/visual/interior-design-visualizer/) | Generate an empty room and fill it with stylish furniture / decor; or redesign an existing room |
+| [Keyboard Art Maker](skills/library/visual/keyboard-art-maker/) | Artistic top-down photos of keyboard keycaps arranged to spell custom messages |
+| [Logo + Branding Package](skills/library/visual/logo-branding/) | Logo + full branding package — variations (dark/light/icon), palette, mockups |
+| [Logo Generator](skills/library/visual/logo-generator/) | Quick single-shot polished logo — fast, clean vector aesthetic with accurate brand-name text |
+| [Multi-Angle Reshoot](skills/library/visual/multi-angle-reshoot/) | Re-render a subject from dramatic camera angles (fish-eye, bird's-eye, low, macro) — identity preserved |
+| [Multi-Angle Shots](skills/library/visual/multi-angle-shots/) | Full multi-angle product shot set — front, side, back, top-down, 45° |
+| [Selfie with Celebrities](skills/library/visual/selfie-with-celebrities/) | Realistic behind-the-scenes selfie of the user with a celebrity; optional cinematic long-take |
+| [Storyboard Generator](skills/library/visual/storyboard/) | Generate N keyframes for a short story or scene sequence (image only, no video) |
+| [URL to Design](skills/library/visual/url-to-design/) | Analyze a website URL and generate a redesigned, improved UI with modern aesthetics |
+| [YouTube Thumbnail](skills/library/visual/youtube-thumbnail/) | High-CTR YouTube thumbnail — striking imagery, bold text placement, emotional face/subject |
 
 Each recipe declares its `inputs` and a `Steps` body. Pass the inputs and let your agent execute the steps via `muapi` CLI calls (or raw API for endpoints that don't yet have a CLI alias — see the per-skill *Notes for the Executing Agent* footer).
 
@@ -117,7 +117,7 @@ Each recipe declares its `inputs` and a `Steps` body. Pass the inputs and let yo
 
 ## 🚀 Quick Start
 
-> **Fastest path:** [`muapi-models`](muapi-models/SKILL.md) is a single skill that lets your coding agent discover, price and run any [Muapi](https://muapi.ai) model. Install it with `npx skills add https://muapi.ai`, set `MUAPI_API_KEY`, and ask in plain language. See the [install guide](https://muapi.ai/docs/ai-agent-overview). The steps below set up the script library in this repo.
+> **Fastest path:** [`muapi-models`](skills/muapi-models/SKILL.md) is a single skill that lets your coding agent discover, price and run any [Muapi](https://muapi.ai) model. Install it with `npx skills add https://muapi.ai`, set `MUAPI_API_KEY`, and ask in plain language. See the [install guide](https://muapi.ai/docs/ai-agent-overview). The steps below set up the script library in this repo.
 
 ### 1. Install the muapi CLI
 
@@ -175,7 +175,7 @@ muapi image generate "product on white bg" --model flux-schnell --output-json --
 
 ```bash
 # Use Nano-Banana reasoning to generate a 2K masterpiece
-bash library/visual/nano-banana/scripts/generate-nano-art.sh \
+bash skills/library/visual/nano-banana/scripts/generate-nano-art.sh \
   --file ./my-source-image.jpg \
   --subject "a glass hummingbird" \
   --style "macro photography" \
@@ -186,7 +186,7 @@ bash library/visual/nano-banana/scripts/generate-nano-art.sh \
 ### 6. Direct a Cinematic Scene
 
 ```bash
-cd library/motion/cinema-director
+cd skills/library/motion/cinema-director
 
 # Create a 10-second epic reveal
 bash scripts/generate-film.sh \
@@ -197,7 +197,7 @@ bash scripts/generate-film.sh \
   --view
 
 # Animate a reference image into video
-bash library/motion/seedance-2/scripts/generate-seedance.sh \
+bash skills/library/motion/seedance-2/scripts/generate-seedance.sh \
   --mode i2v \
   --file ./concept.jpg \
   --subject "camera slowly pulls back to reveal the full landscape" \
@@ -205,7 +205,7 @@ bash library/motion/seedance-2/scripts/generate-seedance.sh \
   --view
 
 # Extend an existing video
-bash library/motion/seedance-2/scripts/generate-seedance.sh \
+bash skills/library/motion/seedance-2/scripts/generate-seedance.sh \
   --mode extend \
   --request-id "YOUR_REQUEST_ID" \
   --subject "camera continues pulling back to reveal the vast city" \
@@ -286,7 +286,7 @@ muapi image edit "make it look like a painting" --image "$URL" \
 
 ## 📖 Schema Reference
 
-This repository includes a streamlined `schema_data.json` that core scripts use at runtime to:
+This repository includes a streamlined `skills/schema_data.json` that core scripts use at runtime to:
 - **Validate Model IDs**: Ensures the requested model exists.
 - **Resolve Endpoints**: Automatically maps model names to API endpoints.
 - **Check Parameters**: Validates supported `aspect_ratio`, `resolution`, and `duration` values.

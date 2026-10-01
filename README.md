@@ -111,6 +111,8 @@ Each recipe declares its `inputs` and a `Steps` body. Pass the inputs and let yo
 
 ## 🚀 Quick Start
 
+> **Fastest path:** [`muapi-models`](muapi-models/SKILL.md) is a single skill that lets your coding agent discover, price and run any [Muapi](https://muapi.ai) model. Install it with `npx skills add https://muapi.ai`, set `MUAPI_API_KEY`, and ask in plain language. See the [install guide](https://muapi.ai/docs/ai-agent-overview). The steps below set up the script library in this repo.
+
 ### 1. Install the muapi CLI
 
 The core scripts require [`muapi-cli`](https://www.npmjs.com/package/muapi-cli). Install it once:

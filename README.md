@@ -8,6 +8,12 @@ A high-performance, schema-driven architecture for AI agents to generate, edit, 
 
 ---
 
+## Related Projects
+
+- [MuAPI](https://muapi.ai) — Unified API for image, video, and audio generation across hundreds of AI models.
+- [Agent Skills guide](https://muapi.ai/agent-skills) — How coding agents discover, price and run MuAPI models, plus the MCP server and CLI.
+- [MuAPI MCP Server](https://muapi.ai/docs/mcp) — Use the same models as tool calls in Claude Code, Cursor and Windsurf.
+
 ## ✨ Key Features
 
 - **🤖 Agent-Native Design** — CLI-powered scripts with structured JSON outputs, semantic exit codes, and `--jq` filtering for seamless agentic pipelines.
@@ -144,13 +150,13 @@ muapi auth configure --api-key "YOUR_MUAPI_KEY"
 
 ```bash
 # Install all skills to your AI agent
-npx skills add SamurAIGPT/Generative-Media-Skills --all
+npx skills add SamurAIGPT/muapi-skills --all
 
 # Or install a specific skill
-npx skills add SamurAIGPT/Generative-Media-Skills --skill muapi-media-generation
+npx skills add SamurAIGPT/muapi-skills --skill muapi-media-generation
 
 # Install to specific agents
-npx skills add SamurAIGPT/Generative-Media-Skills --all -a claude-code -a cursor
+npx skills add SamurAIGPT/muapi-skills --all -a claude-code -a cursor
 ```
 
 ### 4. Generate Your First Image
